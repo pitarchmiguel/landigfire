@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Instagram, Facebook, Twitter, MapPin, Phone, Mail, Clock, Leaf, Heart, Coffee } from "lucide-react"
+import { MobileMenu } from "@/components/mobile-menu"
 
 export default function LandingPage() {
   return (
@@ -11,7 +12,7 @@ export default function LandingPage() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Leaf className="h-6 w-6 text-cafe-500" />
-            <span className="text-xl font-bold">Vita Verde</span>
+            <span className="text-xl font-bold">Cafeteria Fire Station</span>
           </div>
           <nav className="hidden md:flex gap-6">
             <Link href="#inicio" className="text-sm font-medium hover:text-cafe-500 transition-colors">
@@ -19,9 +20,6 @@ export default function LandingPage() {
             </Link>
             <Link href="#nosotros" className="text-sm font-medium hover:text-cafe-500 transition-colors">
               Nosotros
-            </Link>
-            <Link href="#menu" className="text-sm font-medium hover:text-cafe-500 transition-colors">
-              Menú
             </Link>
             <Link href="#testimonios" className="text-sm font-medium hover:text-cafe-500 transition-colors">
               Testimonios
@@ -34,25 +32,8 @@ export default function LandingPage() {
             <Button variant="outline" className="hidden md:flex">
               Reservar
             </Button>
-            <Button className="bg-cafe-500 hover:bg-cafe-600">Ordenar Online</Button>
-            <button className="md:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-6 w-6"
-              >
-                <line x1="4" x2="20" y1="12" y2="12" />
-                <line x1="4" x2="20" y1="6" y2="6" />
-                <line x1="4" x2="20" y1="18" y2="18" />
-              </svg>
-            </button>
+            <Button className="bg-cafe-500 hover:bg-cafe-600">Menú</Button>
+            <MobileMenu />
           </div>
         </div>
       </header>
@@ -62,10 +43,10 @@ export default function LandingPage() {
         <section id="inicio" className="relative">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/placeholder.svg?height=800&width=1920"
+              src="/hero_firestation.webp"
               alt="Comida saludable"
               fill
-              className="object-cover brightness-[0.7]"
+              className="object-cover brightness-[0.5]"
               priority
             />
           </div>
@@ -125,7 +106,7 @@ export default function LandingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=800&width=600"
+                  src="/nerea.webp"
                   alt="Nerea Centelles"
                   fill
                   className="object-cover"
@@ -133,20 +114,16 @@ export default function LandingPage() {
               </div>
               <div className="space-y-6">
                 <div className="inline-block px-3 py-1 text-sm font-medium text-cafe-500 bg-cafe-100 rounded-full">
-                  Nuestra Historia
+                  Mi Historia
                 </div>
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Conoce a Nerea Centelles</h2>
-                <p className="text-lg text-muted-foreground">
-                  Fundadora y CEO de Vita Verde, Nerea ha dedicado su vida a promover un estilo de vida saludable a
-                  través de la alimentación consciente.
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Nerea Centelles</h2>
+                <p className="text-muted-foreground">
+                Desde que era pequeña, siempre me llamó la atención cómo los alimentos influían en cómo nos sentíamos, rendíamos y vivíamos. Esa curiosidad me llevó a estudiar Nutrición, una carrera que me dio las bases para entender el cuerpo desde adentro y cómo podemos cuidarlo a través de lo que comemos. Pero con el tiempo descubrí algo más que transformó mi manera de ver la salud: el CrossFit.
                 </p>
                 <p className="text-muted-foreground">
-                  Con más de 10 años de experiencia en gastronomía saludable, Nerea creó Vita Verde con la misión de
-                  demostrar que comer sano puede ser una experiencia deliciosa y satisfactoria. Su pasión por los
-                  ingredientes de calidad y las recetas innovadoras ha convertido a nuestra cafetería en un referente de
-                  la comida saludable en la ciudad.
+                Fue casi por casualidad que lo encontré, pero desde el primer entrenamiento supe que era algo más que un deporte. Me atrapó la energía, el esfuerzo compartido, la disciplina y el reto constante de superarme. Se convirtió en mi estilo de vida, y junto con la nutrición, entendí que podía crear algo más grande: un espacio donde unir mis dos pasiones y compartirlas con los demás.
                 </p>
-                <Button className="bg-cafe-500 hover:bg-cafe-600">Conoce Más</Button>
+    
               </div>
             </div>
           </div>
@@ -234,16 +211,16 @@ export default function LandingPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  name: "María López",
-                  quote: "Vita Verde ha cambiado mi forma de ver la comida saludable. ¡Delicioso y nutritivo!",
+                  name: "David Gual",
+                  quote: "Desayuno, almuerzo y comidas saludables, que no quiere decir poco sabrosas, al contrario! Producto de calidad!",
                 },
                 {
-                  name: "Carlos Rodríguez",
+                  name: "Mario Martinez",
                   quote:
-                    "El mejor lugar para disfrutar de comida saludable sin sacrificar el sabor. El ambiente es increíble.",
+                    "Comida saludable, hecha al momento y con ingredientes locales.",
                 },
                 {
-                  name: "Laura Martínez",
+                  name: "Laura Gonzalez",
                   quote:
                     "Nerea ha creado un espacio único donde cada plato es una obra de arte nutritiva. Imprescindible.",
                 },
@@ -293,7 +270,7 @@ export default function LandingPage() {
                     <MapPin className="h-6 w-6 text-cafe-500 mr-4 mt-0.5" />
                     <div>
                       <h3 className="font-bold mb-1">Dirección</h3>
-                      <p className="text-muted-foreground">Calle Ejemplo 123, 08001 Barcelona</p>
+                      <p className="text-muted-foreground">C/ Amelia Ferrer Armengot 12 <br/>12004 Castellón de la Plana</p>
                     </div>
                   </div>
 
@@ -301,8 +278,8 @@ export default function LandingPage() {
                     <Clock className="h-6 w-6 text-cafe-500 mr-4 mt-0.5" />
                     <div>
                       <h3 className="font-bold mb-1">Horario</h3>
-                      <p className="text-muted-foreground">Lunes a Viernes: 8:00 - 20:00</p>
-                      <p className="text-muted-foreground">Sábado y Domingo: 9:00 - 21:00</p>
+                      <p className="text-muted-foreground">Lunes a Viernes: 7:00 - 17:00</p>
+                      <p className="text-muted-foreground">Sábado: 8:00 - 13:00</p>
                     </div>
                   </div>
 
@@ -310,7 +287,7 @@ export default function LandingPage() {
                     <Phone className="h-6 w-6 text-cafe-500 mr-4 mt-0.5" />
                     <div>
                       <h3 className="font-bold mb-1">Teléfono</h3>
-                      <p className="text-muted-foreground">+34 123 456 789</p>
+                      <p className="text-muted-foreground">690 040 694</p>
                     </div>
                   </div>
 
@@ -318,7 +295,7 @@ export default function LandingPage() {
                     <Mail className="h-6 w-6 text-cafe-500 mr-4 mt-0.5" />
                     <div>
                       <h3 className="font-bold mb-1">Email</h3>
-                      <p className="text-muted-foreground">info@vitaverde.com</p>
+                      <p className="text-muted-foreground">hola@cafeteriastation.com</p>
                     </div>
                   </div>
                 </div>
@@ -347,35 +324,12 @@ export default function LandingPage() {
 
               <div className="h-[400px] rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=800&width=800&text=Mapa"
+                  src="/mapa.webp"
                   alt="Ubicación"
                   width={800}
                   height={800}
                   className="w-full h-full object-cover"
                 />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Newsletter */}
-        <section className="py-12 md:py-16 bg-cafe-500 text-white">
-          <div className="container">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-              <div className="md:w-1/2">
-                <h2 className="text-2xl font-bold mb-2">Suscríbete a nuestro boletín</h2>
-                <p>Recibe nuestras novedades, recetas saludables y ofertas especiales.</p>
-              </div>
-              <div className="w-full md:w-1/2">
-                <form className="flex flex-col sm:flex-row gap-3">
-                  <input
-                    type="email"
-                    placeholder="Tu email"
-                    className="flex h-10 w-full rounded-md border border-white/20 bg-white/10 px-3 py-2 text-sm placeholder:text-white/70 focus:outline-none focus:ring-2 focus:ring-white/30"
-                    required
-                  />
-                  <Button className="bg-white text-cafe-500 hover:bg-white/90">Suscribirse</Button>
-                </form>
               </div>
             </div>
           </div>
@@ -465,16 +419,16 @@ export default function LandingPage() {
             <div>
               <h3 className="font-bold text-lg mb-4">Contacto</h3>
               <address className="not-italic text-cafe-200">
-                <p className="mb-2">Calle Ejemplo 123</p>
-                <p className="mb-2">08001 Barcelona</p>
-                <p className="mb-2">+34 123 456 789</p>
-                <p>info@vitaverde.com</p>
+                <p className="mb-2">C/ Amelia Ferrer Armengot 12</p>
+                <br/>12004 Castellón de la Plana
+                <p className="mb-2">+34 690 040 694</p>
+                <p>hola@cafeteriastation.com</p>
               </address>
             </div>
           </div>
 
           <div className="border-t border-cafe-800 mt-8 pt-8 text-center text-cafe-200 text-sm">
-            <p>&copy; {new Date().getFullYear()} Vita Verde. Todos los derechos reservados.</p>
+            <p>&copy; {new Date().getFullYear()} Firestation Cafeteria. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
