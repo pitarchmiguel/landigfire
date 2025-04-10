@@ -12,7 +12,7 @@ export default function LandingPage() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Leaf className="h-6 w-6 text-cafe-500" />
-            <span className="text-xl font-bold">Cafeteria Fire Station</span>
+            <span className="text-xl font-bold">Fire Station</span>
           </div>
           <nav className="hidden md:flex gap-6">
             <Link href="#inicio" className="text-sm font-medium hover:text-cafe-500 transition-colors">
@@ -56,14 +56,14 @@ export default function LandingPage() {
                 Alimenta tu cuerpo, nutre tu alma
               </h1>
               <p className="text-lg md:text-xl">
-                Descubre una experiencia gastronómica saludable y deliciosa en Vita Verde, donde cada plato está
+                Descubre una experiencia gastronómica saludable y deliciosa en Fire Station, donde cada plato está
                 preparado con ingredientes frescos y orgánicos.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button size="lg" className="bg-cafe-500 hover:bg-cafe-600">
                   Ver Menú
                 </Button>
-                <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/20">
+                <Button size="lg" variant="outline" className="text-cafe-500 border-cafe-500 hover:bg-transparent hover:text-white">
                   Reservar Mesa
                 </Button>
               </div>
@@ -202,7 +202,7 @@ export default function LandingPage() {
         <section id="testimonios" className="py-16 md:py-24">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Lo Que Dicen Nuestros Clientes</h2>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Lo que dicen nuestros clientes</h2>
               <p className="max-w-2xl mx-auto text-lg text-muted-foreground">
                 Experiencias de quienes ya han disfrutado de nuestra propuesta saludable.
               </p>
@@ -343,7 +343,7 @@ export default function LandingPage() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <Leaf className="h-6 w-6" />
-                <span className="text-xl font-bold">Vita Verde</span>
+                <span className="text-xl font-bold">Cafeteria Fire Station</span>
               </div>
               <p className="text-cafe-200 mb-4">Alimentación saludable para un estilo de vida consciente.</p>
               <div className="flex space-x-4">
@@ -419,8 +419,8 @@ export default function LandingPage() {
             <div>
               <h3 className="font-bold text-lg mb-4">Contacto</h3>
               <address className="not-italic text-cafe-200">
-                <p className="mb-2">C/ Amelia Ferrer Armengot 12</p>
-                <br/>12004 Castellón de la Plana
+                <p>C/ Amelia Ferrer Armengot 12</p>
+                <p className="mb-2">12004 Castellón de la Plana</p>
                 <p className="mb-2">+34 690 040 694</p>
                 <p>hola@cafeteriastation.com</p>
               </address>

@@ -6,8 +6,10 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 import Link from "next/link"
 
 export function MobileMenu() {
+  const [open, setOpen] = React.useState(false)
+
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button variant="ghost" size="icon" className="md:hidden">
           <svg
@@ -41,32 +43,36 @@ export function MobileMenu() {
             <Link
               href="#inicio"
               className="text-2xl font-medium hover:text-cafe-500 transition-colors"
+              onClick={() => setOpen(false)}
             >
               Inicio
             </Link>
             <Link
               href="#nosotros"
               className="text-2xl font-medium hover:text-cafe-500 transition-colors"
+              onClick={() => setOpen(false)}
             >
               Nosotros
             </Link>
             <Link
               href="#testimonios"
               className="text-2xl font-medium hover:text-cafe-500 transition-colors"
+              onClick={() => setOpen(false)}
             >
               Testimonios
             </Link>
             <Link
               href="#contacto"
               className="text-2xl font-medium hover:text-cafe-500 transition-colors"
+              onClick={() => setOpen(false)}
             >
               Contacto
             </Link>
             <div className="flex gap-4 mt-8">
-              <Button variant="outline" className="text-lg">
+              <Button variant="outline" className="text-lg border-cafe-500 text-cafe-500 hover:bg-cafe-500 hover:text-white" onClick={() => setOpen(false)}>
                 Reservar
               </Button>
-              <Button className="bg-cafe-500 hover:bg-cafe-600 text-lg">
+              <Button className="bg-cafe-500 hover:bg-cafe-600 text-lg" onClick={() => setOpen(false)}>
                 Menú
               </Button>
             </div>
